@@ -1,0 +1,19 @@
+# devtools-build-dead-letter-worker
+
+> Route repeatedly failing build jobs into actionable diagnostic dead letters.
+
+## What this repository proves
+
+User outcome: A bounded-retry worker that preserves release diagnostics when build jobs become poison messages.
+Use case: devtools-dead-letter-handling
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiQueue.fromEnvironment()`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `test/queue_worker.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

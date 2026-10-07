@@ -1,0 +1,19 @@
+{
+  "name": "devtools-build-dead-letter-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "worker": "tsx src/queue_worker.ts",
+    "test": "tsx --test test/queue_worker.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
